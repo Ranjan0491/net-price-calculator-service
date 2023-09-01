@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+
+  ### app
+  app:
+    image: gsg/net-price-calculator-app:latest
+    container_name: net-price-calculator-app
+    networks:
+      - global-savings-group-net
+    ports:
+      - "9100:8080"
+
+networks:
+  global-savings-group-net:
